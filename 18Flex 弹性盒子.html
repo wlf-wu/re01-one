@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 弹性盒子</title>
+    <!-- 水平轴 开始的地方叫 main start 主轴结束的地方叫main end
+         交叉轴 开始的地方叫cross start 结束的地方叫 cross end
+         单个项目在主轴上占多少位置叫 main size
+         单个项目在交叉轴上占多少位置叫 cross size
+         flex布局 主要是设置flex 容器的对齐方式以及flex item 的大小形态
+
+    -->
+         <style>
+            html{
+                font-size:10px;
+            }
+            .container {
+                /* 弹性布局 */
+                display: flex;
+                height: 49rem;
+                background-color: aqua;
+                /* flex-direction: column; */
+                /* 反转
+                flex-direction: row-reverse; */
+
+                /* 纵向反转 
+                flex-direction: column-reverse; */
+
+                /* 纵向排列 
+                 flex-direction: column; */
+
+                 /* 空间不够换行显示 */
+                 flex-wrap: wrap;
+
+
+                 /* justify-content定义了在主轴上的对应方式 */
+                 /* 中心对其 */
+                 /* justify-content: center; */
+
+
+                 /* 主轴起点对齐 */
+                 /* justify-content: flex-start; */
+
+
+                 /* 主轴终点对齐 */
+                 /* justify-content: flex-end; */
+
+
+                 /* 两端对齐 */
+                 /* justify-content: space-between; */
+
+
+                 /* 平均分布 两侧间隔相同*/
+                 /* justify-content: space-around; */
+
+
+                 /* /* 平均分布 两侧间隔完全相同*/ 
+                 /* justify-content: space-evenly; */
+
+
+                 /* align-items 交叉轴的对齐方式 */
+                 /* cent 中心  stretch 默认 
+                 flex-start 交叉轴起点对齐
+                 center 交叉轴中点对齐
+                 */
+                 /* align-items: center; */
+
+                 align-content: center;
+            }
+            .item{
+                width: 20rem;
+                font-size: 8rem;
+            }
+         </style>
+</head>
+<body>
+    <div class="container">
+        <!-- .item*6{$} 快捷键 -->
+        <div class="item" style="background-color: red;">1</div>
+        <div class="item" style="background-color: yellow;">2</div>
+        <div class="item" style="background-color: blue;">3</div>
+        <div class="item" style="background-color: purple;">4</div>
+        <div class="item" style="background-color: brown;">5</div>
+        <div class="item" style="background-color: green;">6</div>
+    </div>
+</body>
+</html>
